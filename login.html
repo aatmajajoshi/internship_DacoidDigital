@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an Account</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-white flex justify-center items-center min-h-screen">
+    <div class="w-full max-w-md px-6 py-8 bg-white rounded-lg">
+      <!-- Form Title -->
+      <h2 class="text-2xl font-bold mb-6 text-gray-900">Welcome Back</h2>
+
+      <!-- Input Fields -->
+      <form id="myForm" action="choices.html" class="space-y-4">
+        <!-- Email -->
+        <input
+          required
+          type="email"
+          name="email"
+          placeholder="Email"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 bg-gray-100"
+        />
+
+        <!-- Password -->
+        <div class="relative">
+          <input
+            required
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 bg-gray-100"
+          />
+
+          <div
+            class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+            onclick="togglePasswordVisibility()"
+          >
+            <!-- Font Awesome eye slash icon -->
+            <i class="fa-regular fa-eye-slash text-gray-500"></i>
+          </div>
+        </div>
+
+        <!-- Forgot your password link -->
+        <a
+          href="#"
+          class="text-gray-400 hover:text-gray-600 text-sm mt-2 underline"
+        >
+          Forgot your password?
+        </a>
+
+        <script>
+          function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+              passwordInput.type = "text";
+            } else {
+              passwordInput.type = "password";
+            }
+          }
+        </script>
+
+        <div style="margin-top: 25%"></div>
+
+        <!-- Create Account Button-->
+        <button
+          type="submit"
+          class="w-full bg-blue-500 text-white rounded-lg p-3 mt-4 focus:outline-none focus:ring transform hover:scale-105 transition duration-300 ease-in-out"
+        >
+          Sign In
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="flex items-center my-4">
+        <div class="flex-grow border-t border-gray-400"></div>
+        <span class="flex-shrink mx-4 text-gray-600">Or</span>
+        <div class="flex-grow border-t border-gray-400"></div>
+      </div>
+
+      <!-- Social Media Login Options-->
+      <div class="flex justify-center space-x-4">
+        <!-- Google -->
+        <button
+          aria-label="Sign in with Google"
+          class="p-3 rounded-lg shadow-sm focus:outline-none focus:ring hover:shadow-lg"
+          style="border: 1px solid black; background-color: white"
+        >
+          <img
+            src="google_logo.jpg"
+            alt="Google"
+            style="width: 24px; height: 24px"
+          />
+        </button>
+
+        <!-- Facebook -->
+        <button
+          aria-label="Sign in with Facebook"
+          class="p-3 rounded-lg shadow-sm focus:outline-none focus:ring hover:shadow-lg"
+          style="border: 1px solid black; background-color: white"
+        >
+          <img
+            src="facebook_logo.png"
+            alt="Facebook"
+            style="width: 24px; height: 24px"
+          />
+        </button>
+      </div>
+
+      <!-- Already have an account? Login Link-->
+      <div class="text-center mt-6">
+        <a href="register.html" class="text-sm text-blue-500 hover:underline"
+          >Don't have an account? Register</a
+        >
+      </div>
+    </div>
+  </body>
+
+  <script>
+    document.getElementById("myForm").onsubmit = function () {
+      myFunction();
+    };
+
+    function myFunction() {
+      alert("Login Successfully");
+    }
+  </script>
+</html>
